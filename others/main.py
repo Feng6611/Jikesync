@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import uvicorn
 from cubox_sync import sync_job
 
 app = FastAPI()
@@ -17,3 +18,6 @@ async def start_sync(sync_request: SyncRequest):
     sync_job(sync_request.refresh_token, sync_request.cubox_api_key)
 
     return {"detail": "Sync job started"}
+
+
+uvicorn.run("main:app")  # Assuming the file is main.py
