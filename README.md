@@ -31,15 +31,21 @@
   - Obsidian/Logseq
   - Telegram
   - ...
+- 更多形态
+  - 插件
+  - 网页
+  - 快捷指令
+  - ...
 
 ## 使用指南 👨‍💻
 
-按照以下步骤来使用个人帖子同步 Action：
-
-1. 获取用于同步所需的 [Cubox API](https://cubox.pro/) 和[即刻网页版](https://web.okjike.com/)Cookie。
-2. 前往 Github 上你的仓库设置，然后到 secrets 部分。现在请将 `JIKE_COOKIE` 和 `CUBOX_API_KEY` 添加到 Github secrets 中，分别将名字设为 `JIKE_COOKIE` 和 `CUBOX_API_KEY`。
-3. 将此仓库 fork 到你的 Github 账户。
-4. 前往你 fork 的仓库的 "Actions" 标签页，找到工作流 `运行 Python 脚本`，然后点击 `运行工作流` 按钮来手动运行。
+1. fork 到你的仓库
+2. 获取 [Cubox API](https://cubox.pro/) 和[即刻网页版](https://web.okjike.com/) Cookie。
+3. 前往 Github 上仓库设置，secrets，设置变量名如下
+    - JIKE_COOKIE
+    - CUBOX_API_KEY
+4. 前往你 fork 的仓库----> "Actions" ---->"JikeSync"---->"Run workflow"
+5. 检查你的 Cubox
 
 欢迎向此 action 贡献，让其更加完善！
 
