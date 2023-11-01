@@ -1,6 +1,7 @@
 import requests
 import json
 import os
+from http.cookies import SimpleCookie
 
 
 # 输入refresh_token，获取更新的access_token
@@ -45,7 +46,8 @@ if __name__ == "__main__":
     jike_cookie_str = os.getenv("JIKE_COOKIE")
     cubox_api_key = os.getenv("CUBOX_API_KEY")
     # 从全部 cookie 中取出 RefrshToken
-    refresh_token = jike_cookie_str.get("x-jike-refresh-token")
+    jike_cookie_dict = SimpleCookie(jike_cookie_str)
+    refresh_token = jike_cookie_dict["x-jike-refresh-token"].value
     # 原始 Cookie
     cookie_dict = {"x-jike-refresh-token": refresh_token}
     headers = {
