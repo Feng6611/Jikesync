@@ -1,4 +1,4 @@
-name: Run Python Script
+name: JikeSync
 
 on: 
   workflow_dispatch:
